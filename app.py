@@ -86,9 +86,9 @@ def delect(picPath):
     else:
         print("File is deleted successfully")
         
-#@app.route("/")
-#def hello():
-#    return "Hello World!"
+@app.route("/")
+def hello():
+    return "765765!"
 
 if __name__ == "__main__":
     app.run()
