@@ -1,4 +1,4 @@
-Flask
+flask
 gunicorn
 Image
 matplotlib
@@ -6,3 +6,4 @@ librosa
 numpy==1.18.0
 werkzeug
 tensorflow
+os

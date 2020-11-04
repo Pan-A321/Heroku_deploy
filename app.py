@@ -9,7 +9,7 @@ import numpy as np
 import os
 from flask import Flask, request, redirect, url_for
 from werkzeug.utils import secure_filename
-#%%
+
 app = Flask(__name__)
 
 model = tf.keras.models.load_model('D:/Project/M/project2.h5') 
