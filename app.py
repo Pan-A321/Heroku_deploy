@@ -2,7 +2,7 @@
 
 #import tensorflow as tf 
 from PIL import Image
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import librosa
 import librosa.display
 import numpy as np
@@ -47,8 +47,8 @@ def upload_file():
 
 # @app.route("/project/<filename>")
 # def analysis(filename):
-#     picPath = 'D:/Project/project/1.png' #路徑待修改
-#     y, sr = librosa.load("D:/Project/project/TempFile/"+filename, sr=44100) #載入音檔 #待修改
+#     picPath = 'D:/Project/project/1.png' 
+#     y, sr = librosa.load("D:/Project/project/TempFile/"+filename, sr=44100) 
 #     melspec = librosa.feature.melspectrogram(y, sr, n_fft=1024, hop_length=512, n_mels=128)
 #     logmelspec = librosa.power_to_db(melspec)
 #     plt.figure()
@@ -68,14 +68,14 @@ def upload_file():
 #         #ans="this file is OK" 
 #         ans="0"
 #         print('this file is OK')
-#         print('0 的機率是',result[0,0])
-#         print('1 的機率是',result[0,1])
+#         print('0 =',result[0,0])
+#         print('1 =',result[0,1])
 #     else:
 #         #ans="this file is fail"
 #         ans="1"
 #         print('this file is fail')
-#         print('0 的機率是',result[0,0])
-#         print('1 的機率是',result[0,1])
+#         print('0 =',result[0,0])
+#         print('1 =',result[0,1])
 #     delect(picPath)
 #     return ans
 
