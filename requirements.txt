@@ -1,6 +1,2 @@
 flask
 gunicorn
-Image
-librosa
-numpy==1.18.0
-werkzeug
