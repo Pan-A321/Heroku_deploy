@@ -12,10 +12,10 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('D:/Project/M/project2.h5') 
+model = tf.keras.models.load_model('./Project.pkl') 
 
-UPLOAD_FOLDER = 'D:/Project/project/TempFile'
-ALLOWED_EXTENSIONS = set(['wav'])
+UPLOAD_FOLDER = './TempFile'
+ALLOWED_EXTENSIONS = set(['wav','json'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -46,8 +46,8 @@ def upload_file():
 
 @app.route("/project/<filename>")
 def analysis(filename):
-    picPath = 'D:/Project/project/1.png' 
-    y, sr = librosa.load("D:/Project/project/TempFile/"+filename, sr=44100) 
+    picPath = './TempFile/1.png' 
+    y, sr = librosa.load("./TempFile/"+filename, sr=44100) 
     melspec = librosa.feature.melspectrogram(y, sr, n_fft=1024, hop_length=512, n_mels=128)
     logmelspec = librosa.power_to_db(melspec)
     plt.figure()
